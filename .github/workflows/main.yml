@@ -36,7 +36,7 @@ jobs:
       - name: Analyze with SonarCloud
         run: |
           mvn sonar:sonar \
-            -Dsonar.projectKey=actionscode \
+            -Dsonar.projectKey=hprofile2026_hprofile2026 \
             -Dsonar.organization=hprofile2026 \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }}
