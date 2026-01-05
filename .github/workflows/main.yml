@@ -14,13 +14,13 @@ jobs:
          distribution: 'temurin' # See 'Supported distributions' for available options
          java-version: '11'
 
-      # Cache Maven packages FIRST to avoid dependency issues
-      - name: Cache Maven packages
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+      # Temporarily disabled Maven cache to avoid plugin incompatibility
+      # - name: Cache Maven packages
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.m2
+      #     key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+      #     restore-keys: ${{ runner.os }}-m2
 
       - name: Maven test
         run: mvn clean compile test
