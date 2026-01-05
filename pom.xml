@@ -195,6 +195,18 @@
  		                <goals>
  		                    <goal>prepare-agent</goal>
  		                </goals>
+ 		                <configuration>
+ 		                    <includes>
+ 		                        <include>com/visualpathit/**</include>
+ 		                    </includes>
+ 		                    <excludes>
+ 		                        <exclude>java/**</exclude>
+ 		                        <exclude>javax/**</exclude>
+ 		                        <exclude>sun/**</exclude>
+ 		                        <exclude>com/sun/**</exclude>
+ 		                        <exclude>org/**</exclude>
+ 		                    </excludes>
+ 		                </configuration>
  		            </execution>
  		            <execution>
  		                <id>jacoco-site</id>
